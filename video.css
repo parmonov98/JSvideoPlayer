@@ -12,6 +12,7 @@ html {
   max-width: 750px;
   position: relative;
   overflow: hidden;
+  height: 100%;
 }
 
 .video {

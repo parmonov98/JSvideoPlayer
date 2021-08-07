@@ -9,6 +9,7 @@ class VideoPlayer {
       this.playerContainerElements = document.querySelectorAll(`${options['selector']}`);
       this.playerContainerElements.forEach((item, index, elements) => {
         item.querySelector(`.play-button`).addEventListener('click', this.toggle);
+        item.querySelector(`video`).addEventListener('click', this.toggle);
       });
     }
   }
@@ -26,10 +27,10 @@ class VideoPlayer {
     const video = playerContainer.querySelector('video');
     if (video.paused) {
       video.play()
-      e.target.textContent = '❚ ❚'
+      playerContainer.querySelector('.play-button').textContent = '❚ ❚'
     } else {
       video.pause()
-      e.target.textContent = '►'
+      playerContainer.querySelector('.play-button').textContent = '►'
     }
   }
   pause() {
