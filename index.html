@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .row {
+        display: flex;
+      }
+    </style>
+    <title>HTML Video Player</title>
+  </head>
+
+  <body>
+    <div class="row">
+      <div class="video-player">
+        <video src="video.mp4" poster="thumbnail-video.png" class="video"></video>
+        <div class="player-controls">
+          <button class="play-button" title="Play">►</button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="video-player">
+        <video src="video.mp4" poster="thumbnail-video.png" class="video"></video>
+        <div class="player-controls">
+          <button class="play-button" title="Play">►</button>
+
+        </div>
+      </div>
+    </div>
+    <script src="video.js"></script>
+
+    <script>
+      new VideoPlayer({ 'selector': '.video-player' });
+    </script>
+  </body>
+
+</html>
